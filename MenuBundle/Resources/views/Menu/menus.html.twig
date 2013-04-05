@@ -1,0 +1,49 @@
+{% set indexActive = '' %}
+{% set notificationActive = '' %}
+{% set myProfileActive = '' %}
+{% set prayerFeedActive = '' %}
+{% set friendsActive = '' %}
+{% set pagesActive = '' %}
+{% set groupsActive = '' %}
+{% set circlesActive = '' %}
+{% set giveActive = '' %}
+
+{% if path(app.request.attributes.get('_route')) == '/Prayers/web/app_dev.php/menu' %}{% set indexActive = 'current' %}{% endif %}
+{% if path(app.request.attributes.get('_route')) == '/Prayers/web/app_dev.php/menu/notifications/' %}{% set notificationActive = 'current' %}{% endif %}
+{% if path(app.request.attributes.get('_route')) == '/Prayers/web/app_dev.php/menu/myprofile/' %}{% set myProfileActive = 'current' %}{% endif %}
+{% if path(app.request.attributes.get('_route')) == '/Prayers/web/app_dev.php/menu/prayerfeed/' %}{% set prayerFeedActive = 'current' %}{% endif %}
+{% if path(app.request.attributes.get('_route')) == '/Prayers/web/app_dev.php/menu/friends/' %}{% set friendsActive = 'current' %}{% endif %}
+{% if path(app.request.attributes.get('_route')) == '/Prayers/web/app_dev.php/menu/pages/' %}{% set pagesActive = 'current' %}{% endif %}
+{% if path(app.request.attributes.get('_route')) == '/Prayers/web/app_dev.php/menu/groups/' %}{% set groupsActive = 'current' %}{% endif %}
+{% if path(app.request.attributes.get('_route')) == '/Prayers/web/app_dev.php/menu/circles/' %}{% set circlesActive = 'current' %}{% endif %}
+{% if path(app.request.attributes.get('_route')) == '/Prayers/web/app_dev.php/menu/give/' %}{% set giveActive = 'current' %}{% endif %}
+
+<ul>
+	<li class="notifications {{ notificationActive }}">
+		<a href="{{ app.request.getBaseURL() }}/menu/notifications/" title="Notifications"><span class="icon"></span><span class="link">Notifications</span><span class="count current">5</span></a>
+	</li>
+	<li class="today {{ indexActive }}">
+		<a href="{{ app.request.getBaseURL() }}/menu" titile="Today" class="{{ indexActive }}"><span class="icon"></span><span class="link">Today</span></a>
+	</li>
+	<li class="myProfile {{ myProfileActive }}">
+		<a href="{{ app.request.getBaseURL() }}/menu/myprofile/" title="My Profile" class="{{ myProfileActive }}"><span class="icon"></span><span class="link">My Profile</span></a>
+	</li>
+	<li class="prayerFeed {{ prayerFeedActive }}">
+		<a href="{{ app.request.getBaseURL() }}/menu/prayerfeed/" title="Prayer Feed" class="{{ prayerFeedActive }}"><span class="icon"></span><span class="link">Prayer Feed</span></a>
+	</li>
+	<li class="friends {{ friendsActive }}">
+		<a href="{{ app.request.getBaseURL() }}/menu/friends/" title="Friends" class="{{ friendsActive }}"><span class="icon"></span><span class="link">Friends</span></a>
+	</li>
+	<li class="pages {{ pagesActive }}">
+		<a href="{{ app.request.getBaseURL() }}/menu/pages/" title="Pages" class="{{ pagesActive }}"><span class="icon"></span><span class="link">Pages</span></a>
+	</li>
+	<li class="groups {{ groupsActive }}">
+		<a href="{{ app.request.getBaseURL() }}/menu/groups/" title="Groups" class="{{ groupsActive }}"><span class="icon"></span><span class="link">Groups</span><span class="count">0</span></a>
+	</li>
+	<li class="circles {{ circlesActive }}">
+		<a href="{{ app.request.getBaseURL() }}/menu/circles/" title="Circles" class="{{ circlesActive }}"><span class="icon"></span><span class="link">Circles</span></a>
+	</li>
+	<li class="give {{ giveActive }}">
+		<a href="{{ app.request.getBaseURL() }}/menu/give/" title="Give" class="{{ giveActive }}"><span class="icon"></span><span class="link">Give</span></a>
+	</li>
+</ul>

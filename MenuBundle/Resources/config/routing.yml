@@ -1,0 +1,3 @@
+prayer_menu_homepage:
+    pattern:  /menu
+    defaults: { _controller: PrayerMenuBundle:Menu:index }

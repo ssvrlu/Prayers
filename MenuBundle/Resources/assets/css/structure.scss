@@ -1,0 +1,31 @@
+/* ===============================================
+ * 01:  B A S I C    S T R U C T U R E - Basic Structure
+ ============================================== */
+
+#wrapper {
+  width: 990px;
+  margin: 3% auto 0 auto;
+  background: $wrapper-color-white;
+}
+
+.navContentPanel {
+  min-width: 588px;
+  max-width: 100%;
+  /*float:left;*/
+  min-height: 682px;
+  header {
+    border-bottom: 1px solid #a81c00;
+    padding: 10px 0;
+    background: $navPanel-background-color;
+    height: 65px;
+    h1 {
+      font-size: 30px;
+      color: $wrapper-color-white;
+      text-shadow: 1px 1px 1px $menu-background-color;
+    }
+  }
+}
+
+.contentPanel {
+  margin: 8px;
+}

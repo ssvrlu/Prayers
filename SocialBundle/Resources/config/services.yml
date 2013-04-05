@@ -1,0 +1,8 @@
+parameters:
+  facebook.appId  = 150775591757564
+  facebook.secret = 336dc5c1671e843e5bcc551c6f0b028d
+
+services:
+  face_book:
+    class: Prayer\SocialBundle\Service\Facebook
+    arguments: [{ appId: %facebook.appId%, secret: %facebook.secret% }]
